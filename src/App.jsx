@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
-import { Navbar } from './component/Navbar'
+import { useEffect,useState } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Navbar from './component/Navbar'
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
