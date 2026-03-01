@@ -58,11 +58,11 @@ const Navbar = ({ darkMode, toggleDarkMode}) => {
             </span>
           </motion.a>
           {/* Navigation */}
-          <div className="hidden lg:flex item-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6">
             {navItem.map((item) => (
               <a
               key={item.name}
-              href={item.href}
+              href={item.link}
               onClick={() => handleNavClick(item.name)}
               className="relative"
               >
@@ -77,8 +77,18 @@ const Navbar = ({ darkMode, toggleDarkMode}) => {
                 whileTap={{ scale: 0.95}}>
                   {item.name}
                 </motion.span>
+                {activeSection === item.name.toLowerCase() && (
+                  <motion.div
+                  layoutId="navbar-indicator"
+                  className={`absolute -bottom-1 left-0
+                  fight-0 h-0.5 bg-linear-to-r rounded-full
+                  ${colors.indicator}`}>
+                  </motion.div>
+                )}
               </a>
             ))}
+          </div>
+          <div>
           </div>
         </div>
       </motion.nav>
