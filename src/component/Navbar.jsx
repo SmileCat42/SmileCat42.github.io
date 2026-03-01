@@ -1,5 +1,6 @@
 import { motion} from "framer-motion";
 import { useState } from "react"
+import { Sun, Moon } from "lucide-react";
 
 const Navbar = ({ darkMode, toggleDarkMode}) => {
   const [activeSection, setActiveSection] = useState('home')
@@ -81,14 +82,33 @@ const Navbar = ({ darkMode, toggleDarkMode}) => {
                   <motion.div
                   layoutId="navbar-indicator"
                   className={`absolute -bottom-1 left-0
-                  fight-0 h-0.5 bg-linear-to-r rounded-full
+                  right-0 h-0.5 bg-linear-to-r rounded-full
                   ${colors.indicator}`}>
                   </motion.div>
                 )}
               </a>
             ))}
           </div>
-          <div>
+          <div className= "flex items-center space-x-2">
+            {/* Dark Mode Toggle*/}
+            <motion.button
+            whileHover={{ scale:1.1}}
+            whileTap={{ scale:0.9}}
+            onClick={toggleDarkMode}
+            className={`p-2 rounded-full ${darkMode
+                ? 'bg-gray-700'
+                : 'bg-gray-200'
+            } transition-colors`}
+            aria-label={darkMode
+              ? 'Switch to light mode'
+              : 'Switch to dark mode'
+            }>
+                {darkMode ? (
+                  <Sun className="w-5 h-5 text-yellow-300"/>
+                ) : (
+                  <Moon className="w-5 h-5 text-gray-700"/>
+                )}
+            </motion.button>
           </div>
         </div>
       </motion.nav>
