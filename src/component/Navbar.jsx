@@ -66,7 +66,7 @@ const Navbar = ({ darkMode, toggleDarkMode}) => {
               href={item.link}
               onClick={() => handleNavClick(item.name)}
               className="relative"
-              >
+              > 
                 <motion.span
                 className={`font-medium transition-colors duration-300
                 ${
@@ -143,6 +143,46 @@ const Navbar = ({ darkMode, toggleDarkMode}) => {
             </motion.button>
           </div>
         </div>
+        {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0}}
+              animate={{ opacity:1, height: 'auto'}}
+              exit={{ opacity: 0, height: 0}}
+              transition={{ duration: 0.3}}
+              className={`absolute top-full left-0 right-0 mt-2 lg:hidden
+              ${darkMode
+                ? 'bg-gray-900/95'
+                : 'bg-white/95'
+              } backdrop-blur-lg rounded-xl shadow-lg border ${
+                darkMode ? 'border-gray-700' : 'border-gray-200'
+              }`}>
+                <div className="px-4 py-3 space-y-2">
+                  <a
+                  key={item.name}
+                  href={item.link}
+                  onClick={() => handleNavClick(item.name)}
+                  className="block">
+                    <motion.div
+                    whileHover={{ x: 5}}
+                    className={`py-3 px-4 rounded-lg text-center
+                    ${
+                    activeSection === item.name.toLowerCase()
+                    ? darkMode ? 'bg-gray-800' : 'bg-yellow-100'
+                    : ''
+                    }`}>
+                        <span
+                        className={`font-medium ${
+                          activeSection === item.toLowerCase()
+                          ? colors.textActive
+                          : colors.textSecondary
+                        }`}>
+                          {item.name}
+                        </span>
+                    </motion.div>
+                  </a>
+                </div>
+            </motion.div>
+        )}
       </motion.nav>
     </div>
   )
