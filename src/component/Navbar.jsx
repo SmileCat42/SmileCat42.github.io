@@ -92,13 +92,13 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             {/* Dark Mode Toggle*/}
             <motion.button
               whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileTap={{ scale: 0.9 }} //เมือ่กด ขยาย
               onClick={toggleDarkMode}
               className={`p-2 rounded-full ${darkMode
                 ? 'bg-gray-700'
                 : 'bg-gray-200'
                 } transition-colors`}
-              aria-label={darkMode
+              aria-label={darkMode //แสดงข้อความ
                 ? 'Switch to light mode'
                 : 'Switch to dark mode'
               }>
