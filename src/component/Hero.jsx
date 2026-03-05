@@ -2,8 +2,9 @@ import instagram from '../assets/instagram.png'
 import tiktok from '../assets/tiktok.png'
 import github from '../assets/github.png'
 import youtube from '../assets/youtube.png'
+import { ExternalLink } from "lucide-react";
 
-const Hero = ( darkMode) => {
+const Hero = ({ darkMode }) => {
     const socialIcons = [
         { icon: instagram, alt: 'Instagram'},
         { icon: tiktok, alt: 'tiktok'},
@@ -34,7 +35,7 @@ const Hero = ( darkMode) => {
         <section
         id='home'
         data-aos='fade-up'
-        data-aos-delat='250'
+        data-aos-delay='250'
         className='body-font z-10'>
             <div className='container mx-auto flex px-4 sm:px-8 lg:px-14
             py-12 lg:py-32 flex-col lg:flex-row items-center justify-between
@@ -50,7 +51,7 @@ const Hero = ( darkMode) => {
                             target='_blank'
                             data-aos-delay={`${400 + index * 100}`}
                             className='transform hover:scale-110
-                            transituin-transform duration-300'>
+                            transition-transform duration-300'>
                                 <img
                                 src={social.icon}
                                 alt={social.alt}
@@ -70,7 +71,7 @@ const Hero = ( darkMode) => {
                     <p className={`mb-6 sm:mb-8 leading-relaxed max-w-md
                         sm:max-w-lg ${theme.textSecondary}`}
                         data-aos='fade-up'
-                        data-aos-dela='600'>
+                        data-aos-delay='600'>
                         Studying second-year Computer Science 
                         in the Faculty of Science. I am 30 years old.
                          Although I do not have work experience in the tech 
@@ -78,6 +79,27 @@ const Hero = ( darkMode) => {
                           I understand how the workplace works, and I can handle
                            pressure well.
                     </p>
+                    {/* Buttons */}
+                    <div className='w-full pt-4 sm:pt-6'>
+                    <div className='flex flex-col sm:flex-row justify-center
+                    lg:justify-start gap-3 sm:gap-4'
+                    data-aos='fade-up'
+                    data-aos-delay='700'
+                    >
+                        <a 
+                        href='google.co.th' className='w-full sm:w-auto'>
+                            <button className='w-full sm:w-auto
+                    inline-flex items-center justify-center text-white
+                    bg-linear-to-r from-yellow-400 to-orange-500 border-0
+                    py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)]
+                    rounded-full text-base sm:text-lg font-semibold transition-all
+                    duration-300 tranform'>
+                        ดูเวอร์ชั่นภาษาไทยที่นี่
+                        <ExternalLink className='w-4 h-4 sm:h-5 sm:w-5 ml-2'/>
+                    </button>
+                        </a>
+                    </div>
+                    </div>
                 </div>
             </div>
         </section>
