@@ -4,6 +4,7 @@ import github from '../assets/github.png'
 import youtube from '../assets/youtube.png'
 import { ExternalLink } from "lucide-react";
 import { Mail } from "lucide-react";
+import hi from '../assets/hi.png'
 import golf from "../assets/golf01.jpg"
 
 const Hero = ({ darkMode }) => {
@@ -39,8 +40,8 @@ const Hero = ({ darkMode }) => {
                 data-aos='fade-up'
                 data-aos-delay='250'
                 className='body-font z-10'>
-                <div className='container mx-auto flex px-4 sm:px-8 lg:px-14
-            py-12 lg:py-32 flex-col lg:flex-row items-center justify-between
+                <div className='container mx-auto flex px-4 sm:px-8 lg:px-25
+            py-12 lg:py-35 flex-col lg:flex-row items-center justify-between
             lg:mt-0 mt-14'>
                     <div className='lg:w-1/2 w-full flex flex-col items-center
                 lg:items-start text-center lg:text-left mb-12 lg:mb-0'>
@@ -95,7 +96,7 @@ const Hero = ({ darkMode }) => {
                     bg-linear-to-r from-yellow-400 to-orange-500 border-0
                     py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)]
                     rounded-full text-base sm:text-lg font-semibold transition-all
-                    duration-300 tranform'>
+                    duration-300 transform'>
                                         ดูเวอร์ชั่นภาษาไทยที่นี่
                                         <ExternalLink className='w-4 h-4 sm:h-5 sm:w-5 ml-2' />
                                     </button>
@@ -103,7 +104,7 @@ const Hero = ({ darkMode }) => {
                                 <a href="#contact" className='w-full sm:w-auto'>
                                     <button className={`w-full sm:w-auto
                     inline-flex items-center ${theme.buttonSecondary}
-                    justify-center text-white border-0
+                    justify-center border-0
                     py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)]
                     rounded-full text-base sm:text-lg font-semibold transition-all
                     duration-300 tranform`}>
@@ -125,8 +126,16 @@ const Hero = ({ darkMode }) => {
                              <div className='relative overflow-hidden'>
                                 <img
                                 src={golf}
-                                alt="" />
-                            </div>           
+                                alt="golf image"
+                                className='w-full h-auto object-cover transform
+                                hover:scale-105 transition-transform duration-500' />
+                            </div>  
+                            <img
+                            src={hi}
+                            alt="Hi icon"
+                            className='absolute -top-2 sm:top-3 left-28
+                            sm:left-35 w-14 h-14 sm:w-20 sm:h-20 object-contain
+                            animate-bounce opacity-90 z-10' />         
                         </div>
 
                     </div>
