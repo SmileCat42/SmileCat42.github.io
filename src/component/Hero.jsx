@@ -5,7 +5,8 @@ import youtube from '../assets/youtube.png'
 import { ExternalLink } from "lucide-react";
 import { Mail } from "lucide-react";
 import hi from '../assets/hi.png'
-import golf from "../assets/golf01.jpg"
+import golfDark from "../assets/golf01.jpg"
+import golfLight from "../assets/golf02.jpg"
 
 const Hero = ({ darkMode }) => {
     const socialIcons = [
@@ -125,7 +126,7 @@ const Hero = ({ darkMode }) => {
                         <div className='relative w-4/5 sm:w-3/4 lg:w-full'>
                              <div className='relative overflow-hidden'>
                                 <img
-                                src={golf}
+                                src={darkMode ? golfDark : golfLight}
                                 alt="golf image"
                                 className='w-full h-auto object-cover transform
                                 hover:scale-105 transition-transform duration-500' />
@@ -133,7 +134,7 @@ const Hero = ({ darkMode }) => {
                             <img
                             src={hi}
                             alt="Hi icon"
-                            className='absolute -top-2 sm:top-3 left-28
+                            className='absolute -top-2 sm:top-3 left-[30%]
                             sm:left-35 w-14 h-14 sm:w-20 sm:h-20 object-contain
                             animate-bounce opacity-90 z-10' />         
                         </div>

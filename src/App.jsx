@@ -34,6 +34,7 @@ function App() {
     }>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <Hero darkMode={darkMode} />
+      <About darkMode={darkMode} />
     </div>
   )
 }
