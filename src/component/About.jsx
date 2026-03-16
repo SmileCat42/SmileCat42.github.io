@@ -1,4 +1,6 @@
 import React from 'react'
+import golfDark from "../assets/golf04.png"
+import golfLight from "../assets/golf02.jpg"
 
 const About = (darkMode) => {
   return (
@@ -21,6 +23,13 @@ const About = (darkMode) => {
               data-aos='zoom-in'
               data-aos-delay='600'>
               </div>
+              <img
+              src={golfDark}
+              alt="About Image"
+              className='absolute inset-0 w-full h-full
+              object-cover z-10 transition duration-300'
+              data-aos='zoom-in'
+              data-aos-delay='400'/>
           </div>
         </figure>
       </div>
