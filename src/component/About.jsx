@@ -32,6 +32,33 @@ const About = (darkMode) => {
               data-aos-delay='400'/>
           </div>
         </figure>
+        <article
+        data-aos='fade-left'
+        data-aos-delay='300'
+        className='text-center lg:text-left relative order-1
+        lg:order-2'>
+          <header>
+            <h1 className='text-3xl sm:text-4xl lg:text-5xl
+            xl:text-6xl font-bold mb-4 sm:mb-6
+            text-transparent bg-linear-to-r from-yellow-400
+            to-yellow-600 bg-clip-text'
+            data-aos='fade-up'
+            data-aos-delay='400'>
+                About Me
+            </h1>
+          </header>
+          <p>
+              Krittaya Tantichaiyakul (Golf⛳)<br/>
+              Age : 30 years old<br/>
+              Gender : LGBTQ (male at birth)<br/>
+              Educated : Bachelor’s Degree in Chinese,<br/>
+                 Faculty of Humanities and Social Sciences, Burapha University<br/>
+              Second Bachelor’s Degree (In Progress), Computer Science, Ramkhamhaeng University (Year 2)<br/>
+              
+
+
+          </p>
+        </article>
       </div>
 
     </section>
