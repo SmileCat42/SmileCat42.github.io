@@ -94,7 +94,7 @@ const Hero = ({ darkMode }) => {
                                     href='google.co.th' className='w-full sm:w-auto'>
                                     <button className='w-full sm:w-auto
                     inline-flex items-center justify-center text-white
-                    bg-linear-to-r from-yellow-400 to-orange-500 border-0
+                    bg-linear-to-r from-yellow-500 to-yellow-500 border-0
                     py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)]
                     rounded-full text-base sm:text-lg font-semibold transition-all
                     duration-300 transform'>

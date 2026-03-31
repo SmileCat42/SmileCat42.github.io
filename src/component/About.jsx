@@ -2,11 +2,10 @@ import React from 'react'
 import golfDark from "../assets/golf04.png"
 import golfLight from "../assets/golf02.jpg"
 
-const About = (darkMode) => {
+const About = ({darkMode}) => {
   return (
     <section id="about" className={`min-h-screen overflow-hidden flex
-    items-center justify-center px-4 sm:px-6 ${
-      darkMode ? 'bg-gray-900' : 'bg-gray-50'
+    items-center justify-center px-4 sm:px-6
     }`}>
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2
       gap-8 sm:gap-12 items-center">
@@ -47,20 +46,76 @@ const About = (darkMode) => {
                 About Me
             </h1>
           </header>
-          <p>
+          <p className = {`text-sm sm:text-base lg:text-lg
+            xl:text-xl mb-6 sm:mb-8 leading-relaxed
+            bg-linear-to-r from-orange-900/10 to-orange-900/5
+            p-4 sm:p-6 rounded-xl sm:rounded-2xl
+            backdrop-blur-sm
+            ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}
+            data-aos='fade-up'
+            data-aos-delay='500'>
               Krittaya Tantichaiyakul (Golf⛳)<br/>
               Age : 30 years old<br/>
               Gender : LGBTQ (male at birth)<br/>
               Educated : Bachelor’s Degree in Chinese,<br/>
                  Faculty of Humanities and Social Sciences, Burapha University<br/>
               Second Bachelor’s Degree (In Progress), Computer Science, Ramkhamhaeng University (Year 2)<br/>
-              
-
-
           </p>
+          <div
+          className='flex flex-wrap justify-center
+          lg:justify-start gap-4 sm:gap-6 lg:gap-8 mb-6
+          sm:mb-8'>
+              <div
+              className='text-center'
+              data-aos='zoom-in'
+              data-aos-delay='600'>
+                  <div className='text-2xl sm:text-3xl
+                  lg:text-4xl font-bold text-yellow-500'>2+</div>
+                  <div className={`text-xs sm:text-sm lg:text-base
+                    ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                      Education
+                    </div>
+              </div>
+
+              <div
+              className='text-center'
+              data-aos='zoom-in'
+              data-aos-delay='600'>
+                  <div className='text-2xl sm:text-3xl
+                  lg:text-4xl font-bold text-yellow-500'>8+</div>
+                  <div className={`text-xs sm:text-sm lg:text-base
+                    ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                      All Works Experience
+                    </div>
+
+              </div>
+
+              <div
+              className='text-center'
+              data-aos='zoom-in'
+              data-aos-delay='600'>
+                  <div className='text-2xl sm:text-3xl
+                  lg:text-4xl font-bold text-yellow-500'>6+</div>
+                  <div className={`text-xs sm:text-sm lg:text-base
+                    ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                      Projects
+                    </div>
+              </div>
+          </div>
+          <button className={`w-full sm:w-auto
+                    inline-flex items-center border-2 border-yellow-500
+                    justify-center border-0
+                    py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)]
+                    rounded-full text-base sm:text-lg font-semibold transition-all
+                    duration-300 tranform
+                    ${darkMode
+                      ? 'text-white bg-yellow-500/10'
+                      : 'text-gray-800 bg-white/90'
+                    }`}>
+                      Learn More
+                    </button>
         </article>
       </div>
-
     </section>
   )
 }
