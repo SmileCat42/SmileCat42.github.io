@@ -4,6 +4,7 @@ import 'aos/dist/aos.css'
 import Navbar from './component/Navbar'
 import Hero from './component/Hero'
 import About from './component/About'
+import Skills from './component/Skills';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
