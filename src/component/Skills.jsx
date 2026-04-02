@@ -1,6 +1,11 @@
 import framer_motion from '../assets/framer_motion.png'
 import react from '../assets/react.png'
 import tailwind from '../assets/tailwind.png'
+import cc from '../assets/c++2.png'
+import java from '../assets/java3.png'
+import nest from '../assets/nest2.png'
+import jsf from '../assets/jsf.png'
+import cn from '../assets/cn2.png'
 
 const Skills = ({darkMode}) => {
     const skillsData = [
@@ -10,7 +15,16 @@ const Skills = ({darkMode}) => {
             color: 'from-cyan-500 to-blue-500'},
         {name: 'Tailwind', icon: tailwind, level: 75,
             color: 'from-teal-500 to-cyan-500'},
-        
+        {name: 'C++', icon: cc, level: 80,
+            color: 'from-teal-500 to-cyan-500'},
+        {name: 'Java', icon: java, level: 80,
+            color: 'from-teal-500 to-cyan-500'},
+        {name: 'Nest.js', icon: nest, level: 58,
+            color: 'from-teal-500 to-cyan-500'},  
+        {name: 'Jakarta Face', icon: jsf, level: 75,
+            color: 'from-teal-500 to-cyan-500'}, 
+        {name: 'Chinese Language', icon: cn, level: 65,
+            color: 'from-teal-500 to-cyan-500'}, 
     ];
 
   return (
@@ -91,6 +105,38 @@ const Skills = ({darkMode}) => {
                               }}>
                                   {skill.name}
                               </h3>
+                          </div>
+                          <div className='mb-2 flex justify-between items-center'>
+                            <span
+                            className='font-medium'
+                            style={{
+                                color: darkMode ? '#d1d5db' : '#6b7280'
+                            }}>
+                                Proficiency
+                            </span>
+                            <span
+                            style={{
+                      background: 'linear-gradient(to right, #f97316, #f59e0b)',
+                      WebkitBackgroundClip: 'text',
+                      backgroundClip: 'text',
+                      color: 'transparent'
+                            }}
+                            className='font-bold'>
+                                {skill.level}%
+                            </span>
+                          </div>
+                          <div
+                          className='w-full rounded-full h-3 overflow-hidden'
+                          style={{
+                              backgroundColor: darkMode ? '#374151' : '#e5e7eb'
+                          }}>
+                            <div
+                            className={`h-full rounded-full bg-linear-to-r
+                            ${skill.color} transition-all duration-1000
+                            ease-out`}
+                            style={{ width: `${skill.level}%`}}>
+                              
+                            </div>
                           </div>
                       </div>
                 </div>
