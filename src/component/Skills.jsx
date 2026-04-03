@@ -10,7 +10,7 @@ import cn from '../assets/cn2.png'
 const Skills = ({darkMode}) => {
     const skillsData = [
         {name: 'framer motion', icon: framer_motion, level: 62,
-            color: 'from-blue-500 to-cyan-500'},
+            color: 'from-cyan-500 to-blue-500'},
         {name: 'React', icon: react, level: 65,
             color: 'from-cyan-500 to-blue-500'},
         {name: 'Tailwind', icon: tailwind, level: 75,
@@ -57,8 +57,10 @@ const Skills = ({darkMode}) => {
                   style={{
                       color: darkMode ? '#d1d5db' : '#4b5563'
                   }}>
-                      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                      aaaaaaaaaaaaaaaaaaaaaaaaaaa
+                      I have learned backend development in a very intensive way, 
+                      including CRUD, AJAX, transactions, SEO, and JWT. 
+                      At the same time, I also improve my frontend skills 
+                      by learning on my own from YouTube.
                   </p>
             </div>
             <div
@@ -135,9 +137,19 @@ const Skills = ({darkMode}) => {
                             ${skill.color} transition-all duration-1000
                             ease-out`}
                             style={{ width: `${skill.level}%`}}>
-                              
                             </div>
                           </div>
+                          <div className={`mt-6 pt-4 border-t
+                            ${darkMode ? 'border-gray-700' : 'border-gray-300'}`}>
+                              <div
+                              className='h-1 rounded-full opacity-70
+                              group-hover:w-full transition-all duration-500 w-1/3'
+                              style={{
+                                  background: 'linear-gradient(to right, #f97316, #f59e0b)'
+                              }}>
+                                
+                              </div>
+                            </div>
                       </div>
                 </div>
               ))}
