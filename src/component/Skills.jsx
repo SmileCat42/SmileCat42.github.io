@@ -45,7 +45,7 @@ const Skills = ({darkMode}) => {
                 }}>
                   My <span
                   style={{
-            background: 'linear-gradient(to right, #f97316, #f59e0b)',
+            background: 'linear-gradient(to right, #ecaf05, #f0b145)',
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
             color: 'transparent'
