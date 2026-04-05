@@ -163,7 +163,7 @@ const Projects = ({ darkMode }) => {
                                             color: darkMode ? 'white' : '#374151'
                                         }}
                         className='inline-flex items-center gap-2 px-7 py-4 text-white text-sm rounded-full ml-4 font-semibold
-                        hover:scale-110 duration-300 font-white'
+                        hover:scale-110 duration-300 font-white shadow-md hover:shadow-gray-300/50 '
                         data-aos='zoom-in'
                         data-aos-delay='400'>
                         <span>Growth Journey<br/>
