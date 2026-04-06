@@ -1,6 +1,24 @@
 import contactImg from '../assets/contact.png'
+import emailjs from 'emailjs-com'
 
 export const Contact = ({ darkMode }) => {
+    const handleSubmit = (e) => {
+  e.preventDefault()
+
+  emailjs.sendForm(
+    'service_gmail',
+    'template_bmb03ui',
+    e.target,
+    '-GM7T5E6FTM1VXaSe'
+  )
+  .then(() => {
+    alert('ส่งสำเร็จ!')
+  })
+  .catch(() => {
+    alert('ส่งไม่สำเร็จ')
+  })
+}
+
   return (
     <section
     id = "contact"
@@ -43,7 +61,8 @@ export const Contact = ({ darkMode }) => {
                     className='w-full max-w-xs sm:max-w-sm lg:max-w-md
                     h-auto object-contain'/>
                 </div>
-                <form
+                <form 
+                onSubmit={handleSubmit}
                 style={{
                     background: darkMode
                 ? 'linear-gradient(to right, #1f2937, #111827)'
@@ -57,6 +76,7 @@ export const Contact = ({ darkMode }) => {
                     sm:gap-4 mb-3 sm:mb-4'>
                         <input
                         type="text"
+                        name="first_name"
                         placeholder='First Name'
                         style={{
                             backgroundColor: darkMode ? '#374151' : '#faede3',
@@ -71,6 +91,7 @@ export const Contact = ({ darkMode }) => {
 
                         <input
                         type="text"
+                        name="last_name"
                         placeholder='Last Name'
                         style={{
                             backgroundColor: darkMode ? '#374151' : '#faede3',
@@ -85,6 +106,7 @@ export const Contact = ({ darkMode }) => {
 
                         <input
                         type="email"
+                        name="email"
                         placeholder='Email Address'
                         style={{
                             backgroundColor: darkMode ? '#374151' : '#faede3',
@@ -92,13 +114,14 @@ export const Contact = ({ darkMode }) => {
                             color: darkMode ? 'white' : '#1f2937'
                         }}
                         className='w-full px-3 sm:px-4 py-2 sm:py-3
-                        rounded-lg text-sm sm:text-base
+                        rounded-lg text-sm sm:text-base sm:col-span-2
                         focus:border-yellow-500 focus:ring-2
                         focus:ring-yellow-500/20 transition-all'
                         required/>
 
                         <input
                         type="tel"
+                        name="phone"
                         placeholder='Phone Number'
                         style={{
                             backgroundColor: darkMode ? '#374151' : '#faede3',
@@ -106,10 +129,38 @@ export const Contact = ({ darkMode }) => {
                             color: darkMode ? 'white' : '#1f2937'
                         }}
                         className='w-full px-3 sm:px-4 py-2 sm:py-3
-                        rounded-lg text-sm sm:text-base
+                        rounded-lg text-sm sm:text-base sm:col-span-2
                         focus:border-yellow-500 focus:ring-2
                         focus:ring-yellow-500/20 transition-all'
                         required/>
+
+                        <textarea
+                        rows='4'
+                        name="message"
+                        placeholder='Your Message'
+                        style={{
+                            backgroundColor: darkMode ? '#374151' : '#faede3',
+                            borderColor : darkMode ? '#4b5563' : '#d1d5db',
+                            color: darkMode ? 'white' : '#1f2937'
+                        }}
+                        className='w-full px-3 sm:px-4 py-2 sm:py-3
+                        rounded-lg text-sm sm:text-base sm:col-span-2
+                        focus:border-yellow-500 focus:ring-2
+                        focus:ring-yellow-500/20 transition-all
+                        mb-4 sm:mb-6 resize-none'
+                        required/>
+
+                        <button
+                        type='submit'
+                        style={{
+                background: 'linear-gradient(to right, #f97316, #f59e0b)'
+                        }}
+                        className='w-full py-2 sm:py-3 text-white
+                        font-semibold rounded-lg text-sm sm:text-base
+                        hover:shadow-lg hover:shadow-yellow-500/25
+                        hover:scale-[1.02] transition-all sm:col-span-2'>
+                            Send Message
+                        </button>
 
                     </div>
                 </form>
