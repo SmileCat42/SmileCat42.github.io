@@ -153,12 +153,13 @@ export const Contact = ({ darkMode }) => {
                         <button
                         type='submit'
                         style={{
-                background: 'linear-gradient(to right, #f97316, #f59e0b)'
+                background: 'linear-gradient(to right, #f5c116, #f1ca48)'
                         }}
                         className='w-full py-2 sm:py-3 text-white
                         font-semibold rounded-lg text-sm sm:text-base
                         hover:shadow-lg hover:shadow-yellow-500/25
-                        hover:scale-[1.02] transition-all sm:col-span-2'>
+                        hover:scale-[1.02] transition-all sm:col-span-2
+                        hover:text-orange-900'>
                             Send Message
                         </button>
 

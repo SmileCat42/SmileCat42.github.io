@@ -10,10 +10,10 @@ import golfLight from "../assets/golf02.jpg"
 
 const Hero = ({ darkMode }) => {
     const socialIcons = [
-        { icon: instagram, alt: 'Instagram' },
-        { icon: tiktok, alt: 'tiktok' },
-        { icon: github, alt: 'github' },
-        { icon: youtube, alt: 'youtube' }
+        { icon: instagram, alt: 'Instagram', link:'https://github.com/SmileCat42' },
+        { icon: tiktok, alt: 'tiktok', link:'https://github.com/SmileCat42' },
+        { icon: github, alt: 'github', link:'https://github.com/SmileCat42' },
+        { icon: youtube, alt: 'youtube', link:'https://www.youtube.com/@golfmaxss' }
     ];
 
     const darkTheme = {
@@ -51,7 +51,7 @@ const Hero = ({ darkMode }) => {
                             {socialIcons.map((social, index) => (
                                 <a
                                     key={index}
-                                    href='#'
+                                    href={social.link}
                                     target='_blank'
                                     data-aos-delay={`${400 + index * 100}`}
                                     className='transform hover:scale-110
@@ -70,7 +70,16 @@ const Hero = ({ darkMode }) => {
                         lg:text-5xl mb-4 font-bold ${theme.textPrimary}`}
                             data-aos='fade-up'
                             data-aos-delay='500'>
-                            Hi, I'm Krittaya
+                            Hi, I'm{' '}
+                            <span
+                  style={{
+            background: 'linear-gradient(to right, #ecaf05, #f0b145)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'transparent'
+                  }}>
+                             Krittaya
+                            </span>
                         </h1>
                         <p className={`mb-6 sm:mb-8 leading-relaxed max-w-md
                         sm:max-w-lg ${theme.textSecondary}`}

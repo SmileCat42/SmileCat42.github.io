@@ -150,7 +150,8 @@ const Projects = ({ darkMode }) => {
                         className='inline-flex items-center font-semibold
                             justify-center gap-2 px-7 py-4 text-white
                             text-sm rounded-full hover:shadow-lg hover:scale-110
-                            hover:shadow-yellow-400/25 transition-all duration-300'
+                            hover:shadow-yellow-400/25 transition-all duration-300
+                            hover:text-orange-900'
                         data-aos='zoom-in'
                         data-aos-delay='400'>
                         <span >View All Projects<br/>

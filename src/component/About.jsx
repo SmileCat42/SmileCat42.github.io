@@ -48,12 +48,16 @@ const About = ({darkMode}) => {
           </header>
           <p className = {`text-sm sm:text-base lg:text-lg
             xl:text-xl mb-6 sm:mb-8 leading-relaxed
-            bg-linear-to-r from-orange-900/10 to-orange-900/5
             p-4 sm:p-6 rounded-xl sm:rounded-2xl
             backdrop-blur-sm
             ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}
             data-aos='fade-up'
-            data-aos-delay='500'>
+            data-aos-delay='500'
+            style={{
+                      background: darkMode
+                      ? 'linear-gradient(to bottom right, #374151, #1f2937)'
+                      : 'linear-gradient(to bottom right, #f8dc80, #fdfbf5)',
+                              }}>
               Krittaya Tantichaiyakul (Golf⛳)<br/>
               Age : 30 years old<br/>
               Gender : LGBTQ (male at birth)<br/>

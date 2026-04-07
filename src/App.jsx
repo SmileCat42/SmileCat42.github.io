@@ -7,6 +7,7 @@ import About from './component/About'
 import Skills from './component/Skills';
 import Projects from './component/Projects';
 import Contact from './component/Contact';
+import Footer from './component/Footer';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
@@ -42,6 +43,7 @@ function App() {
       <Skills darkMode={darkMode} />
       <Projects darkMode={darkMode} />
       <Contact darkMode={darkMode} />
+      <Footer darkMode={darkMode} />
     </div>
   )
 }

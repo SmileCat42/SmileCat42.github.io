@@ -10,21 +10,21 @@ import cn from '../assets/cn2.png'
 const Skills = ({darkMode}) => {
     const skillsData = [
         {name: 'framer motion', icon: framer_motion, level: 62,
-            color: 'from-cyan-500 to-blue-500'},
+            color: 'from-yellow-300 to-amber-500'},
         {name: 'React', icon: react, level: 65,
-            color: 'from-cyan-500 to-blue-500'},
+            color: 'from-teal-300 to-cyan-500'},
         {name: 'Tailwind', icon: tailwind, level: 75,
-            color: 'from-teal-500 to-cyan-500'},
+            color: 'from-teal-300 to-cyan-500'},
         {name: 'C++', icon: cc, level: 80,
-            color: 'from-teal-500 to-cyan-500'},
+            color: 'from-green-300 to-green-500'},
         {name: 'Java', icon: java, level: 80,
-            color: 'from-teal-500 to-cyan-500'},
+            color: 'from-green-300 to-green-500'},
         {name: 'Nest.js', icon: nest, level: 58,
-            color: 'from-teal-500 to-cyan-500'},  
+            color: 'from-yellow-300 to-amber-500'},  
         {name: 'Jakarta Face', icon: jsf, level: 75,
-            color: 'from-teal-500 to-cyan-500'}, 
+            color: 'from-teal-300 to-cyan-500'}, 
         {name: 'Chinese Language', icon: cn, level: 65,
-            color: 'from-teal-500 to-cyan-500'}, 
+            color: 'from-teal-300 to-cyan-500'}, 
     ];
 
   return (
@@ -77,7 +77,7 @@ const Skills = ({darkMode}) => {
                     style={{
                       background: darkMode
                       ? 'linear-gradient(to bottom right, #1f2937, #111827)'
-                      : 'linear-gradient(to bottom right, #ffffff, #f3f4f6)',
+                      : 'linear-gradient(to bottom right, #fad87a, #f3f4f6)',
                       borderColor: darkMode ? '#374151' : '#e5e7eb'
                     }}
                       className='h-full p-6 rounded-2xl border
@@ -130,7 +130,7 @@ const Skills = ({darkMode}) => {
                           <div
                           className='w-full rounded-full h-3 overflow-hidden'
                           style={{
-                              backgroundColor: darkMode ? '#374151' : '#e5e7eb'
+                              backgroundColor: darkMode ? '#374151' : '#c8d6f3'
                           }}>
                             <div
                             className={`h-full rounded-full bg-linear-to-r
