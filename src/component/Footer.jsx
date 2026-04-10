@@ -48,7 +48,8 @@ const Footer = ({ darkMode }) => {
                     hover:bg-linear-to-r hover:from-yellow-300
                     hover:to-yellow-500 hover:text-white
                     bg-[#374151] dark:bg-[#f3f4f6]
-                    text-white dark:text-[#374151]">
+                    text-white dark:text-[#374151]"
+                    target='_blank'>
                         <FaGithub/>
                     </a>
 
@@ -59,7 +60,8 @@ const Footer = ({ darkMode }) => {
                     hover:bg-linear-to-r hover:from-yellow-300
                     hover:to-yellow-500 hover:text-white
                     bg-[#374151] dark:bg-[#f3f4f6]
-                    text-white dark:text-[#374151]">
+                    text-white dark:text-[#374151]"
+                    target='_blank'>
                         <FaFacebook/>
                     </a>
 
@@ -70,7 +72,8 @@ const Footer = ({ darkMode }) => {
                     hover:bg-linear-to-r hover:from-yellow-300
                     hover:to-yellow-500 hover:text-white
                     bg-[#374151] dark:bg-[#f3f4f6]
-                    text-white dark:text-[#374151]">
+                    text-white dark:text-[#374151]"
+                    target='_blank'>
                         <FaLine/>
                     </a>
                 </div>

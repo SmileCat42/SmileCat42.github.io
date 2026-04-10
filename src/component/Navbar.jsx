@@ -184,7 +184,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               whileTap={{ scale: 0.95}}
               className={`block py-3 px-4 text-center font-semibold
               rounded-lg bg-linear-to-r ${colors.button}
-              text-white shadow-md`}>
+              text-white shadow-md `}>
                 Hire ME
               </motion.a>
             </div>

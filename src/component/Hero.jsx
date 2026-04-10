@@ -10,7 +10,7 @@ import golfLight from "../assets/golf02.jpg"
 
 const Hero = ({ darkMode }) => {
     const socialIcons = [
-        { icon: instagram, alt: 'Instagram', link:'https://github.com/SmileCat42' },
+        { icon: instagram, alt: 'Instagram', link:'https://www.instagram.com/golfringdove/' },
         { icon: tiktok, alt: 'tiktok', link:'https://github.com/SmileCat42' },
         { icon: github, alt: 'github', link:'https://github.com/SmileCat42' },
         { icon: youtube, alt: 'youtube', link:'https://www.youtube.com/@golfmaxss' }
@@ -106,8 +106,8 @@ const Hero = ({ darkMode }) => {
                     bg-linear-to-r from-yellow-500 to-yellow-500 border-0
                     py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)]
                     rounded-full text-base sm:text-lg font-semibold transition-all
-                    duration-300 transform'>
-                                        ดูเวอร์ชั่นภาษาไทยที่นี่
+                    duration-300 transform hover:text-orange-800'>
+                                        Download CV
                                         <ExternalLink className='w-4 h-4 sm:h-5 sm:w-5 ml-2' />
                                     </button>
                                 </a>

@@ -2,6 +2,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import project1 from '../assets/Project1.png'
 import project2 from '../assets/java3.png'
 import project3 from '../assets/java3.png'
+import { Link } from 'react-router-dom';
 
 const Projects = ({ darkMode }) => {
     const projects = [
@@ -154,21 +155,26 @@ const Projects = ({ darkMode }) => {
                             hover:text-orange-900'
                         data-aos='zoom-in'
                         data-aos-delay='400'>
-                        <span >View All Projects<br/>
-                        ดูโปรเจคทั้งหมด</span>
+                        <span >View All Projects<br />
+                            ดูโปรเจคทั้งหมด</span>
                     </a>
                     <a
-                        href="/journey"
+                        href="#/journey"  // ต้องใส่ #/ นำหน้าด้วยเพราะคุณใช้ HashRouter
+                        target="_blank"
+                        rel="noopener noreferrer" // เพิ่มความปลอดภัยเมื่อเปิดแท็บใหม่
                         style={{
-                                            backgroundColor: darkMode ? '#374151' : '#b7bdc9',
-                                            color: darkMode ? 'white' : '#374151'
-                                        }}
-                        className='inline-flex items-center gap-2 px-7 py-4 text-white text-sm rounded-full ml-4 font-semibold
-                        hover:scale-110 duration-300 font-white shadow-md hover:shadow-gray-300/50 '
+                            backgroundColor: darkMode ? '#374151' : '#b7bdc9',
+                            color: darkMode ? 'white' : '#374151'
+                        }}
+                        className='inline-flex items-center gap-2 px-7 py-4 text-sm rounded-full ml-4 font-semibold
+             hover:scale-110 duration-300 shadow-md hover:shadow-gray-300/50'
                         data-aos='zoom-in'
-                        data-aos-delay='400'>
-                        <span>Growth Journey<br/>
-                        พัฒนาการของฉัน</span>
+                        data-aos-delay='400'
+                    >
+                        <span className="text-center md:text-left">
+                            Growth Journey<br />
+                            <span className="text-xs opacity-80 font-normal">พัฒนาการของฉัน</span>
+                        </span>
                     </a>
 
                 </div>
