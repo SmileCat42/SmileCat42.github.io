@@ -1,18 +1,36 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import project1 from '../assets/Project1.png'
+import { FaGithub } from 'react-icons/fa';
+import lv1 from '../assets/01.png'
+import lv2 from '../assets/011.png'
+import lv3 from '../assets/02.png'
+import lv4 from '../assets/033.png'
+import lv5 from '../assets/04.png'
+import lv6 from '../assets/05.png'
+import lv7 from '../assets/06.png'
+import lv8 from '../assets/07.png'
+import lv9 from '../assets/09.png'
+import lv10 from '../assets/10.png'
 
 const Journey = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     const history = [
-        { version: "v1.0", title: "Seedling", desc: "เริ่มเพาะเมล็ดพันธุ์ด้วยโครงสร้าง HTML/CSS", date: "Jan 2024", img: project1 },
-        { version: "v1.5", title: "First Leaf", desc: "ใบแรกผลิออกมาพร้อมสีสันส้มสดใส", date: "Feb 2024", img: project1 },
-        { version: "v2.0", title: "Strong Branch", desc: "กิ่งก้านแข็งแรงขึ้นด้วย React และ Logic ที่ซับซ้อน", date: "Mar 2024", img: "/assets/journey/v3.png" },
+        { version: "Level 1", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter1_Link", title: "Starting", desc: "ออกแบบโฮมเพจเวอร์ชั่น 1 และเริ่มหัดเขียนโปรแกรมด้วยโครงสร้าง HTML", date: "Oct 2025", img: lv1 },
+        { version: "Level 2", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter1_Link", title: "HTML V2", desc: "ออกแบบโฮมเพจเวอร์ชั่น 2", date: "Nov 2025", img: lv2 },
+        { version: "Level 3", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter4_CSS", title: "CSS", desc: "ออกแบบโฮมเพจเวอร์ชั่น 3 และเริ่มออกแบบด้วย CSS", date: "Nov 2025", img: lv3 },
+        { version: "Level 4", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter5_MySQL", title: "CRUD", desc: "เริ่มเข้าสู่โลกของ Backend โดยการให้เว็ปคุยกับฐานข้อมูล MySQL เบื้องต้น ฝึกออกแบบสร้าง CRUD แบบพื้นฐาน ได้แก่ Create, Read, Update และ Delete", date: "Dec 2025", img: lv4 },
+        { version: "Level 5", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter7_Bootstrap", title: "Framwork", desc: "ออกแบบโฮมเพจเวอร์ชั่น 4 มีการใช้ Framwork Bootstrap เข้ามาช่วยออกแบบ", date: "Dec 2025", img: lv5 },
+        { version: "Level 6", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter8_MVC", title: "MVC", desc: "เรียนรู้การออกแบบโครงสร้าง Backend การทำ CRUD ด้วย MVC โดยการแบ่งแยกหน้าที่แต่ละส่วนอย่างชัดเจน ได้แก่ Controller, DAO, Model และ Util ที่เชื่อมกับ MySQL", date: "Dec 2025", img: lv6 },
+        { version: "Level 7", link: "https://github.com/SmileCat42/WebProgramming/blob/master/Project1_JSP/web/FrontPageF_G.jsp", title: "⭐Project JSP", desc: "ลงมือทำมินิโปรเจคด้วยตนเอง จากเดิมเว็ปโรงเรียนแบบ StaticWeb กลายเป็นเว็ปเรียนออนไลน์แบบ DynamicWeb ซึ่งออกแบบสำหรับลูกค้าเข้ามาใช้งาน โดยที่จะได้ตอบโจทย์กับการเล่นระบบ CRUD กับฐานข้อมูลมากขึ้น มีการใช้หลักการ AJAX, Transaction เข้ามาออกแบบระบบหลังบ้าน ทำให้การรับส่งข้อมูลไหลลื่นขึ้น", date: "Jan 2026", img: lv7 },
+        { version: "Level 8", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project2_JSF/src/main/webapp", title: "⭐Project JSF", desc: "เป็นอีก 1 โปรเจคที่ทำด้วย Jakarta Servlet Face จากเดิมโปรเจค JSP จะรองรับให้ผู้เรียนจองที่นั่ง จะเพิ่มหรือลดหรือแก้ไขได้แค่ภายในบัญชีของตนเองเท่านั้น แต่โปรเจคนี้จะออกแบบมาสำหรับ Admin สำหรับจัดการผลิตภัณฑ์โดยตรงซึ่งก็คือวิชาเรียน โดยสามารถทำการเพิ่มลบแก้ไขรายวิชาได้โดยตรง มีการใช้ Programmatic view, Cookie, HTTPS และ LMS เข้ามาเล่นกับโปรเจคนี้", date: "Feb 2026", img: lv8 },
+        { version: "Level 9", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project3_Nestjs", title: "⭐ Nest.js", desc: "โปรเจคนี้ทำด้วย Nest.js และ EJS ในการทำเว็ปร้านขายตุ๊กตาและพวงกุญแจ มีการกำหนด Role บนฐานข้อมูลว่าใครมีสิทธิ์ในการแค่ดูหรือจัดการสินค้าได้บ้าง", date: "Mar 2025", img: lv9 },
+         { version: "Level 10", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project3_Nestjs", title: "JWT,SEO,CMS,HTTPS", desc: "โปรเจคเดิม Nest.js ได้มีการต่อยอดถึงความเป็นมืออาชีพ กอล์ฟได้มีการเพิ่มหลักการ JWT หรือการสร้าง Token ในการปกป้องข้อมูลผู้ใช้และ SEO ได้มีการประเมินจาก Lighthouse ได้ถึง 91 คะแนน ช่วยให้ค้นหาเพจได้เจอง่ายขึ้น อีกทั้งมีการสร้าง CMS ด้วย Wordpress ด้วยหน้าเพจสาขา 2 สุดท้ายสามารถรันแบบ HTTPS ได้สำเร็จบน NGROK", date: "Mar 2025", img: lv10 },
     ];
 
     return (
-        <div className="min-h-screen bg-[#fdfbf7] text-gray-800 pb-20 overflow-hidden">
+        <div className="min-h-screen bg-[#fdfbf7] text-gray-800 overflow-hidden">
 
             <div
                 className="fixed inset-0 w-full h-full opacity-10 pointer-events-none z-0"
@@ -36,7 +54,7 @@ const Journey = () => {
             <header className="text-center py-10" data-aos="fade-down">
                 <h1 className="text-6xl font-black text-green-900 mb-2">My Growth</h1>
                 <div className="w-24 h-1 bg-orange-400 mx-auto rounded-full"></div>
-                <p className="mt-4 text-gray-600 italic">"แสดงถึงพัฒนาการในการเขียนเว็ป"</p>
+                <p className="mt-4 text-gray-600 italic">"โชว์ถึงพัฒนาการในการเขียนเว็ปของฉัน"</p>
             </header>
 
             <div className="relative max-w-5xl mx-auto px-4 mt-20">
@@ -47,11 +65,11 @@ const Journey = () => {
 
 
                     {/* --- 🌿 เส้นเถาวัลย์ (SVG Path) --- */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-full h-full hidden md:block">
-                        <svg width="100%" height="100%" viewBox="0 0 100 1000" preserveAspectRatio="none" className="stroke-orange-900 fill-none">
-                            {/* เส้นหลักแบบหยักเหมือนกิ่งไม้ */}
+                    <div className="absolute inset-0 w-full h-full pointer-events-none">
+                        <svg width="100%" height="100%" viewBox="0 0 100 1000" preserveAspectRatio="none" className="stroke-orange-900/50 fill-none">
+                            {/* ให้เส้นโปร่งใสขึ้นในมือถือด้วย /50 (opacity 50%) จะได้ไม่แย่งสายตา */}
                             <path d="M50,0 Q60,100 40,200 T50,400 T60,600 T40,800 T50,1000"
-                                strokeWidth="1" strokeDasharray="2,2" />
+                                strokeWidth="2" strokeDasharray="4,4" />
                         </svg>
                     </div>
 
@@ -60,7 +78,7 @@ const Journey = () => {
                             <div key={index} className={`relative flex items-center justify-between w-full ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
 
                                 {/* ส่วนรูปภาพ - ทรงอิสระเหมือนใบไม้/ผลไม้ */}
-                                <div className="w-[45%]" data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}>
+                                <div className="w-[55%]" data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}>
                                     <div className="relative group">
                                         <div className="absolute -inset-2 bg-gradient-to-r from-green-200 to-orange-200 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] blur-xl opacity-50 group-hover:opacity-100 transition duration-500"></div>
                                         <div className="relative w-full aspect-video overflow-hidden rounded-[30%_70%_70%_30%/30%_30%_70%_70%] border-4 border-white shadow-2xl">
@@ -81,9 +99,22 @@ const Journey = () => {
                                 {/* ส่วนข้อความ */}
                                 <div className="w-[45%]" data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}>
                                     <div className={`p-6 ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
-                                        <span className="text-orange-500 font-mono text-sm tracking-widest uppercase">{item.version}</span>
+                                        <span className="text-orange-500 font-mono text-sm font-bold tracking-widest uppercase">{item.version}</span>
                                         <h2 className="text-3xl font-black text-green-900 mt-1">{item.title}</h2>
                                         <p className="text-gray-600 mt-3 leading-relaxed">{item.desc}</p>
+
+                                        <div className={`mt-6 flex gap-2 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                                            <a
+                                                href={item.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className='flex items-center gap-1.5 px-4 py-2 bg-green-800 text-white text-sm rounded-lg hover:bg-green-700 transition-all hover:scale-105'
+                                            >
+                                                <FaGithub />
+                                                <span>Code</span>
+                                            </a>
+                                        </div>
+
                                         <div className="mt-4 inline-block px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full font-bold">
                                             {item.date}
                                         </div>
@@ -95,6 +126,37 @@ const Journey = () => {
                     </div>
                 </div>
             </div>
+            <footer className="w-full mt-32 py-20 relative overflow-hidden">
+
+                {/* 1. แผ่นสีขาวจางๆ (Mask) ที่ทำให้รูปกิ่งไม้หลัง Footer ดูจางลง */}
+                {/* เราใช้ bg-white/60 (ใส 60%) เพื่อไม่ให้ขาวเกินไป และใช้ gradientmask เพื่อเบลนขอบบน */}
+                <div
+                    className="absolute inset-0 bg-white/60 z-0"
+                    style={{
+                        // เทคนิคการเบลนขอบบน: สร้าง Gradient สีขาวทึบไปหาใส (Transparent)
+                        WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, white 40%)',
+                        maskImage: 'linear-gradient(to bottom, transparent 0%, white 40%)',
+                    }}
+                ></div>
+
+                {/* 2. เนื้อหา Footer (อยู่ชั้นบน z-10) */}
+                <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
+
+                    {/* สีตัวหนังสือ Coming Soon ให้ชัดเจน */}
+                    <h3 className="text-4xl md:text-6xl font-black text-green-900/70 uppercase tracking-widest">
+                        Coming Soon
+                    </h3>
+
+                    <p className="mt-6 text-gray-700 italic">
+                        "เมล็ดพันธุ์แห่งการเรียนรู้ไม่มีวันหยุดพัก... เจอกันเร็วๆ นี้"
+                    </p>
+
+                    <div className="flex justify-center gap-4 mt-8">
+                        <div className="w-12 h-1 bg-orange-400 rounded-full shadow-md"></div>
+                        <div className="w-2 h-2 bg-orange-400 rounded-full animate-bounce shadow-md"></div>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };

@@ -1,7 +1,7 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import project1 from '../assets/Project1.png'
 import project2 from '../assets/java3.png'
-import project3 from '../assets/java3.png'
+import project3 from '../assets/09.png'
 import { Link } from 'react-router-dom';
 
 const Projects = ({ darkMode }) => {
@@ -167,13 +167,13 @@ const Projects = ({ darkMode }) => {
                             color: darkMode ? 'white' : '#374151'
                         }}
                         className='inline-flex items-center gap-2 px-7 py-4 text-sm rounded-full ml-4 font-semibold
-             hover:scale-110 duration-300 shadow-md hover:shadow-gray-300/50'
+             justify-center hover:scale-110 duration-300 shadow-md hover:shadow-gray-300/50 '
                         data-aos='zoom-in'
                         data-aos-delay='400'
                     >
-                        <span className="text-center md:text-left">
+                        <span className="text-center">
                             Growth Journey<br />
-                            <span className="text-xs opacity-80 font-normal">พัฒนาการของฉัน</span>
+                            <span className="text-sm opacity-80 font-normal">พัฒนาการของฉัน</span>
                         </span>
                     </a>
 
