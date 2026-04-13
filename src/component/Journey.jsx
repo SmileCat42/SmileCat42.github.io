@@ -20,15 +20,16 @@ const Journey = () => {
         const link = document.querySelector("link[rel~='icon']");
 
         if (link) {
-        link.href = "/plant2.png"; // ไอคอนเฉพาะหน้านี้
-    }
+            link.href = "/plant2.png"; // ไอคอนเฉพาะหน้านี้
+        }
 
-         window.scrollTo(0, 0); }, []);
+        window.scrollTo(0, 0);
+    }, []);
 
     const history = [
-        { version: "Level 1", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter1_Link", title: "Starting", desc: "ออกแบบโฮมเพจเวอร์ชั่น 1 และเริ่มหัดเขียนโปรแกรมด้วยโครงสร้าง HTML", date: "Oct 2025", img: lv1 },
-        { version: "Level 2", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter1_Link", title: "HTML V2", desc: "ออกแบบโฮมเพจเวอร์ชั่น 2", date: "Nov 2025", img: lv2 },
-        { version: "Level 3", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter4_CSS", title: "CSS", desc: "ออกแบบโฮมเพจเวอร์ชั่น 3 และเริ่มออกแบบด้วย CSS", date: "Nov 2025", img: lv3 },
+        { version: "Level 1", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter1_Link", title: "Starting", desc: "ออกแบบโฮมเพจเวอร์ชั่น 1 และเริ่มหัดเขียนโปรแกรมด้วยโครงสร้าง HTML เน้นการลิงค์หาหน้าเพจอื่นๆ", date: "Oct 2025", img: lv1 },
+        { version: "Level 2", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter1_Link", title: "HTML V2", desc: "ออกแบบโฮมเพจเวอร์ชั่น 2 เริ่มมีการ import รูปเข้ามาตกแต่งหน้าเพจ เริ่มฝึกใช้ตาราง ร่วมกับหน้าเพจ", date: "Nov 2025", img: lv2 },
+        { version: "Level 3", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter4_CSS", title: "CSS", desc: "ออกแบบโฮมเพจเวอร์ชั่น 3 และเริ่มออกแบบด้วย CSS มีการออกแบบ Layout แบ่งโครงสร้างของหน้าเว็ป", date: "Nov 2025", img: lv3 },
         { version: "Level 4", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter5_MySQL", title: "CRUD", desc: "เริ่มเข้าสู่โลกของ Backend โดยการให้เว็ปคุยกับฐานข้อมูล MySQL เบื้องต้น ฝึกออกแบบสร้าง CRUD แบบพื้นฐาน ได้แก่ Create, Read, Update และ Delete", date: "Dec 2025", img: lv4 },
         { version: "Level 5", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter7_Bootstrap", title: "Framwork", desc: "ออกแบบโฮมเพจเวอร์ชั่น 4 มีการใช้ Framwork Bootstrap เข้ามาช่วยออกแบบ", date: "Dec 2025", img: lv5 },
         { version: "Level 6", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter8_MVC", title: "MVC", desc: "เรียนรู้การออกแบบโครงสร้าง Backend การทำ CRUD ด้วย MVC โดยการแบ่งแยกหน้าที่แต่ละส่วนอย่างชัดเจน ได้แก่ Controller, DAO, Model และ Util ที่เชื่อมกับ MySQL", date: "Dec 2025", img: lv6 },
@@ -69,7 +70,7 @@ const Journey = () => {
 
                     {/* --- 🌿 เส้นเถาวัลย์ (SVG Path) --- */}
                     <div className="absolute inset-0 w-full h-full pointer-events-none">
-                        <svg width="100%" height="100%" viewBox="0 0 100 1000" preserveAspectRatio="none" className="stroke-orange-900/50 fill-none">
+                        <svg width="100%" height="100%" viewBox="0 0 100 1000" preserveAspectRatio="none" className="stroke-orange-900/30 fill-none">
                             {/* ให้เส้นโปร่งใสขึ้นในมือถือด้วย /50 (opacity 50%) จะได้ไม่แย่งสายตา */}
                             <path d="M50,0 Q60,100 40,200 T50,400 T60,600 T40,800 T50,1000"
                                 strokeWidth="2" strokeDasharray="4,4" />
@@ -85,11 +86,34 @@ const Journey = () => {
                             >
 
                                 {/* ส่วนรูปภาพ - ทรงอิสระเหมือนใบไม้/ผลไม้ */}
-                                <div className="w-full md:w-[55%] order-2 md:order-none mt-6 md:mt-0" data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}>
+                                <div
+                                    className="w-full md:w-[55%] order-2 md:order-none mt-6 md:mt-0 lg:mr-10 lg:ml-10"
+                                    data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                                >
                                     <div className="relative group">
-                                        <div className="absolute -inset-2 bg-gradient-to-r from-green-200 to-orange-200 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] blur-xl opacity-50 group-hover:opacity-100 transition duration-500"></div>
+
+                                        {/* glow ด้านหลัง */}
+                                        <div className="absolute -inset-2 bg-gradient-to-r from-green-200 to-orange-200 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] blur-xl opacity-40 group-hover:opacity-80 transition duration-500"></div>
+
+                                        {/* container รูป */}
                                         <div className="relative w-full aspect-[4/3] md:aspect-video overflow-hidden rounded-[30%_70%_70%_30%/30%_30%_70%_70%] border-4 border-white shadow-2xl">
-                                            <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+
+                                            {/* รูป */}
+                                            <img
+                                                src={item.img}
+                                                alt={item.title}
+                                                className="
+                            w-full h-full object-cover
+                            transition-all duration-700
+                            group-hover:scale-110
+                            brightness-95 contrast-90 
+                            group-hover:brightness-105 group-hover:contrast-105
+                            "
+                                            />
+
+                                            {/* overlay สีเขียว */}
+                                            <div className="absolute inset-0 bg-green-900/10 pointer-events-none"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -100,22 +124,22 @@ const Journey = () => {
                                         <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                                     </div>
                                     {/* ใบไม้เล็กๆ ยื่นออกมา */}
-                                    <div className={`absolute top-0 ${index % 2 === 0 ? '-right-8' : '-left-8'} text-green-600 text-2xl`}>🌿</div>
+                                    <div className={`absolute top-0 ${index % 2 === 0 ? '-right-8' : '-left-8'} text-green-600 text-2xl`}></div>
                                 </div>
 
                                 {/* ส่วนข้อความ */}
-                                <div className="w-full md:w-[45%] order-1 md:order-none" data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}>
-                                    <div className={`p-6 ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
+                                <div className="text-center bg-white/30 rounded-xl w-full md:w-[45%] order-1 md:order-none" data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}>
+                                    <div className={`text-center p-6 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                                         <span className="text-orange-500 font-mono text-sm font-bold tracking-widest uppercase">{item.version}</span>
                                         <h2 className="text-3xl font-black text-green-900 mt-1">{item.title}</h2>
-                                        <p className="text-gray-600 mt-3 leading-relaxed">{item.desc}</p>
+                                        <p className="text-gray-700 mt-3 leading-relaxed">{item.desc}</p>
 
-                                        <div className={`mt-6 flex gap-2 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                                        <div className={`mt-6 justify-center flex gap-2 ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}>
                                             <a
                                                 href={item.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className='flex items-center gap-1.5 px-4 py-2 bg-green-800 text-white text-sm rounded-lg hover:bg-green-700 transition-all hover:scale-105'
+                                                className='flex j gap-1.5 px-4 py-2 bg-gray-500 text-white text-sm rounded-lg hover:bg-gray-400 transition-all hover:scale-105'
                                             >
                                                 <FaGithub />
                                                 <span>Code</span>
