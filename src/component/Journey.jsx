@@ -7,8 +7,10 @@ import lv2 from '../assets/011.png'
 import lv3 from '../assets/02.png'
 import lv4 from '../assets/033.png'
 import lv5 from '../assets/04.png'
+
 import lv6 from '../assets/05.png'
 import lv7 from '../assets/06.png'
+import lv7_2 from '../assets/056.png'
 import lv8 from '../assets/07.png'
 import lv9 from '../assets/09.png'
 import lv10 from '../assets/10.png'
@@ -30,7 +32,8 @@ const Journey = () => {
         { version: "Level 4", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter5_MySQL", title: "CRUD", desc: "เริ่มเข้าสู่โลกของ Backend โดยการให้เว็ปคุยกับฐานข้อมูล MySQL เบื้องต้น ฝึกออกแบบสร้าง CRUD แบบพื้นฐาน ได้แก่ Create, Read, Update และ Delete", date: "Dec 2025", img: lv4 },
         { version: "Level 5", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter7_Bootstrap", title: "Framwork", desc: "ออกแบบโฮมเพจเวอร์ชั่น 4 มีการใช้ Framwork Bootstrap เข้ามาช่วยออกแบบ", date: "Dec 2025", img: lv5 },
         { version: "Level 6", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter8_MVC", title: "MVC", desc: "เรียนรู้การออกแบบโครงสร้าง Backend การทำ CRUD ด้วย MVC โดยการแบ่งแยกหน้าที่แต่ละส่วนอย่างชัดเจน ได้แก่ Controller, DAO, Model และ Util ที่เชื่อมกับ MySQL", date: "Dec 2025", img: lv6 },
-        { version: "Level 7", link: "https://github.com/SmileCat42/WebProgramming/blob/master/Project1_JSP/web/FrontPageF_G.jsp", title: "⭐Project JSP", desc: "ลงมือทำมินิโปรเจคด้วยตนเอง จากเดิมเว็ปโรงเรียนแบบ StaticWeb กลายเป็นเว็ปเรียนออนไลน์แบบ DynamicWeb ซึ่งออกแบบสำหรับลูกค้าเข้ามาใช้งาน โดยที่จะได้ตอบโจทย์กับการเล่นระบบ CRUD กับฐานข้อมูลมากขึ้น มีการใช้หลักการ AJAX, Transaction เข้ามาออกแบบระบบหลังบ้าน ทำให้การรับส่งข้อมูลไหลลื่นขึ้น", date: "Jan 2026", img: lv7 },
+        { version: "Level 7", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter7_Bootstrap", title: "Version Final", desc: "ออกแบบโฮมเพจเวอร์ชั่น 5 ซึ่งกับมาใช้งานกับโปรเจคแรก", date: "Dec 2025", img: lv7_2 },
+        { version: "Level 7.5", link: "https://github.com/SmileCat42/WebProgramming/blob/master/Project1_JSP/web/FrontPageF_G.jsp", title: "⭐Project JSP", desc: "ลงมือทำมินิโปรเจคด้วยตนเอง จากเดิมเว็ปโรงเรียนแบบ StaticWeb กลายเป็นเว็ปเรียนออนไลน์แบบ DynamicWeb ซึ่งออกแบบสำหรับลูกค้าเข้ามาใช้งาน โดยที่จะได้ตอบโจทย์กับการเล่นระบบ CRUD กับฐานข้อมูลมากขึ้น มีการใช้หลักการ AJAX, Transaction เข้ามาออกแบบระบบหลังบ้าน ทำให้การรับส่งข้อมูลไหลลื่นขึ้น", date: "Jan 2026", img: lv7 },
         { version: "Level 8", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project2_JSF/src/main/webapp", title: "⭐Project JSF", desc: "เป็นอีก 1 โปรเจคที่ทำด้วย Jakarta Servlet Face จากเดิมโปรเจค JSP จะรองรับให้ผู้เรียนจองที่นั่ง จะเพิ่มหรือลดหรือแก้ไขได้แค่ภายในบัญชีของตนเองเท่านั้น แต่โปรเจคนี้จะออกแบบมาสำหรับ Admin สำหรับจัดการผลิตภัณฑ์โดยตรงซึ่งก็คือวิชาเรียน โดยสามารถทำการเพิ่มลบแก้ไขรายวิชาได้โดยตรง มีการใช้ Programmatic view, Cookie, HTTPS และ LMS เข้ามาเล่นกับโปรเจคนี้", date: "Feb 2026", img: lv8 },
         { version: "Level 9", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project3_Nestjs", title: "⭐ Nest.js", desc: "โปรเจคนี้ทำด้วย Nest.js และ EJS ในการทำเว็ปร้านขายตุ๊กตาและพวงกุญแจ มีการกำหนด Role บนฐานข้อมูลว่าใครมีสิทธิ์ในการแค่ดูหรือจัดการสินค้าได้บ้าง", date: "Mar 2025", img: lv9 },
         { version: "Level 10", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project3_Nestjs", title: "JWT,SEO,CMS,HTTPS", desc: "โปรเจคเดิม Nest.js ได้มีการต่อยอดถึงความเป็นมืออาชีพ กอล์ฟได้มีการเพิ่มหลักการ JWT หรือการสร้าง Token ในการปกป้องข้อมูลผู้ใช้และ SEO ได้มีการประเมินจาก Lighthouse ได้ถึง 91 คะแนน ช่วยให้ค้นหาเพจได้เจอง่ายขึ้น อีกทั้งมีการสร้าง CMS ด้วย Wordpress ด้วยหน้าเพจสาขา 2 สุดท้ายสามารถรันแบบ HTTPS ได้สำเร็จบน NGROK", date: "Mar 2025", img: lv10 },
@@ -152,7 +155,7 @@ const Journey = () => {
                     </h3>
 
                     <p className="mt-6 text-gray-700 italic">
-                        "เมล็ดพันธุ์แห่งการเรียนรู้ไม่มีวันหยุดพัก... เจอกันเร็วๆ นี้"
+                        "การเรียนรู้ไม่มีที่สิ้นสุด... เจอกันเร็วๆ นี้"
                     </p>
 
                     <div className="flex justify-center gap-4 mt-8">
