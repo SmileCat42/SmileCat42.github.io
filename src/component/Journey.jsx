@@ -14,7 +14,14 @@ import lv9 from '../assets/09.png'
 import lv10 from '../assets/10.png'
 
 const Journey = () => {
-    useEffect(() => { window.scrollTo(0, 0); }, []);
+    useEffect(() => {
+        const link = document.querySelector("link[rel~='icon']");
+
+        if (link) {
+        link.href = "/plant2.png"; // ไอคอนเฉพาะหน้านี้
+    }
+
+         window.scrollTo(0, 0); }, []);
 
     const history = [
         { version: "Level 1", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project1_JSP/web/Chapter1_Link", title: "Starting", desc: "ออกแบบโฮมเพจเวอร์ชั่น 1 และเริ่มหัดเขียนโปรแกรมด้วยโครงสร้าง HTML", date: "Oct 2025", img: lv1 },
@@ -26,7 +33,7 @@ const Journey = () => {
         { version: "Level 7", link: "https://github.com/SmileCat42/WebProgramming/blob/master/Project1_JSP/web/FrontPageF_G.jsp", title: "⭐Project JSP", desc: "ลงมือทำมินิโปรเจคด้วยตนเอง จากเดิมเว็ปโรงเรียนแบบ StaticWeb กลายเป็นเว็ปเรียนออนไลน์แบบ DynamicWeb ซึ่งออกแบบสำหรับลูกค้าเข้ามาใช้งาน โดยที่จะได้ตอบโจทย์กับการเล่นระบบ CRUD กับฐานข้อมูลมากขึ้น มีการใช้หลักการ AJAX, Transaction เข้ามาออกแบบระบบหลังบ้าน ทำให้การรับส่งข้อมูลไหลลื่นขึ้น", date: "Jan 2026", img: lv7 },
         { version: "Level 8", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project2_JSF/src/main/webapp", title: "⭐Project JSF", desc: "เป็นอีก 1 โปรเจคที่ทำด้วย Jakarta Servlet Face จากเดิมโปรเจค JSP จะรองรับให้ผู้เรียนจองที่นั่ง จะเพิ่มหรือลดหรือแก้ไขได้แค่ภายในบัญชีของตนเองเท่านั้น แต่โปรเจคนี้จะออกแบบมาสำหรับ Admin สำหรับจัดการผลิตภัณฑ์โดยตรงซึ่งก็คือวิชาเรียน โดยสามารถทำการเพิ่มลบแก้ไขรายวิชาได้โดยตรง มีการใช้ Programmatic view, Cookie, HTTPS และ LMS เข้ามาเล่นกับโปรเจคนี้", date: "Feb 2026", img: lv8 },
         { version: "Level 9", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project3_Nestjs", title: "⭐ Nest.js", desc: "โปรเจคนี้ทำด้วย Nest.js และ EJS ในการทำเว็ปร้านขายตุ๊กตาและพวงกุญแจ มีการกำหนด Role บนฐานข้อมูลว่าใครมีสิทธิ์ในการแค่ดูหรือจัดการสินค้าได้บ้าง", date: "Mar 2025", img: lv9 },
-         { version: "Level 10", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project3_Nestjs", title: "JWT,SEO,CMS,HTTPS", desc: "โปรเจคเดิม Nest.js ได้มีการต่อยอดถึงความเป็นมืออาชีพ กอล์ฟได้มีการเพิ่มหลักการ JWT หรือการสร้าง Token ในการปกป้องข้อมูลผู้ใช้และ SEO ได้มีการประเมินจาก Lighthouse ได้ถึง 91 คะแนน ช่วยให้ค้นหาเพจได้เจอง่ายขึ้น อีกทั้งมีการสร้าง CMS ด้วย Wordpress ด้วยหน้าเพจสาขา 2 สุดท้ายสามารถรันแบบ HTTPS ได้สำเร็จบน NGROK", date: "Mar 2025", img: lv10 },
+        { version: "Level 10", link: "https://github.com/SmileCat42/WebProgramming/tree/master/Project3_Nestjs", title: "JWT,SEO,CMS,HTTPS", desc: "โปรเจคเดิม Nest.js ได้มีการต่อยอดถึงความเป็นมืออาชีพ กอล์ฟได้มีการเพิ่มหลักการ JWT หรือการสร้าง Token ในการปกป้องข้อมูลผู้ใช้และ SEO ได้มีการประเมินจาก Lighthouse ได้ถึง 91 คะแนน ช่วยให้ค้นหาเพจได้เจอง่ายขึ้น อีกทั้งมีการสร้าง CMS ด้วย Wordpress ด้วยหน้าเพจสาขา 2 สุดท้ายสามารถรันแบบ HTTPS ได้สำเร็จบน NGROK", date: "Mar 2025", img: lv10 },
     ];
 
     return (
@@ -44,17 +51,10 @@ const Journey = () => {
                 }}
             ></div>
 
-            {/* ส่วนหัว */}
-            <div className="max-w-6xl mx-auto p-6">
-                <Link to="/" className="text-green-700 hover:text-green-800 font-bold flex items-center gap-2 transition-all">
-                    ← Back to Garden
-                </Link>
-            </div>
-
             <header className="text-center py-10" data-aos="fade-down">
                 <h1 className="text-6xl font-black text-green-900 mb-2">My Growth</h1>
                 <div className="w-24 h-1 bg-orange-400 mx-auto rounded-full"></div>
-                <p className="mt-4 text-gray-600 italic">"โชว์ถึงพัฒนาการในการเขียนเว็ปของฉัน"</p>
+                <p className="mt-4 text-gray-600 italic">"โชว์ถึงพัฒนาการในการเขียนเว็ปของ Krittaya"</p>
             </header>
 
             <div className="relative max-w-5xl mx-auto px-4 mt-20">
@@ -75,13 +75,17 @@ const Journey = () => {
 
                     <div className="space-y-32">
                         {history.map((item, index) => (
-                            <div key={index} className={`relative flex items-center justify-between w-full ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                            <div
+                                key={index}
+                                className={`relative flex flex-col md:flex-row items-center justify-between w-full 
+                ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                            >
 
                                 {/* ส่วนรูปภาพ - ทรงอิสระเหมือนใบไม้/ผลไม้ */}
-                                <div className="w-[55%]" data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}>
+                                <div className="w-full md:w-[55%] order-2 md:order-none mt-6 md:mt-0" data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}>
                                     <div className="relative group">
                                         <div className="absolute -inset-2 bg-gradient-to-r from-green-200 to-orange-200 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] blur-xl opacity-50 group-hover:opacity-100 transition duration-500"></div>
-                                        <div className="relative w-full aspect-video overflow-hidden rounded-[30%_70%_70%_30%/30%_30%_70%_70%] border-4 border-white shadow-2xl">
+                                        <div className="relative w-full aspect-[4/3] md:aspect-video overflow-hidden rounded-[30%_70%_70%_30%/30%_30%_70%_70%] border-4 border-white shadow-2xl">
                                             <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                         </div>
                                     </div>
@@ -97,7 +101,7 @@ const Journey = () => {
                                 </div>
 
                                 {/* ส่วนข้อความ */}
-                                <div className="w-[45%]" data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}>
+                                <div className="w-full md:w-[45%] order-1 md:order-none" data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}>
                                     <div className={`p-6 ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
                                         <span className="text-orange-500 font-mono text-sm font-bold tracking-widest uppercase">{item.version}</span>
                                         <h2 className="text-3xl font-black text-green-900 mt-1">{item.title}</h2>
