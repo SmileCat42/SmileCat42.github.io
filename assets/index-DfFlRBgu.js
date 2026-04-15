@@ -46,7 +46,7 @@ Error generating stack: `+i.message+`
                     lg:mt-0 flex justify-center`,"data-aos":"fade-left","data-aos-delay":"400",children:w.jsxs("div",{className:"relative w-4/5 sm:w-3/4 lg:w-full",children:[w.jsx("div",{className:"relative overflow-hidden",children:w.jsx("img",{src:a?ET:wT,alt:"golf image",className:`w-full h-auto object-cover transform\r
                                 hover:scale-105 transition-transform duration-500`})}),w.jsx("img",{src:AT,alt:"Hi icon",className:`absolute -top-2 sm:top-3 left-[30%]\r
                             sm:left-35 w-14 h-14 sm:w-20 sm:h-20 object-contain\r
-                            animate-bounce opacity-90 z-10`})]})})]})})})},MT="/assets/golf04-D87VdEmR.png",CT=({darkMode:a})=>w.jsx("section",{id:"about",className:`min-h-screen overflow-hidden flex
+                            animate-bounce opacity-90 z-10`})]})})]})})})},MT="/assets/golf06-Cz2wJN83.png",CT=({darkMode:a})=>w.jsx("section",{id:"about",className:`min-h-screen overflow-hidden flex
     items-center justify-center px-4 sm:px-6
     }`,children:w.jsxs("div",{className:`max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2\r
       gap-8 sm:gap-12 items-center`,children:[w.jsx("figure",{"data-aos":"fade-up","data-aos-delay":"300",className:`flex flex-wrap justify-center gap-4 relative\r
