@@ -1,5 +1,5 @@
 import instagram from '../assets/instagram.png'
-import tiktok from '../assets/tiktok.png'
+import facebook from '../assets/fb2.png'
 import github from '../assets/github.png'
 import youtube from '../assets/youtube.png'
 import { ExternalLink } from "lucide-react";
@@ -11,7 +11,7 @@ import golfLight from "../assets/golf02.jpg"
 const Hero = ({ darkMode }) => {
     const socialIcons = [
         { icon: instagram, alt: 'Instagram', link:'https://www.instagram.com/golfringdove/' },
-        { icon: tiktok, alt: 'tiktok', link:'https://github.com/SmileCat42' },
+        { icon: facebook, alt: 'facebook', link:'https://web.facebook.com/aloha.golfring' },
         { icon: github, alt: 'github', link:'https://github.com/SmileCat42' },
         { icon: youtube, alt: 'youtube', link:'https://www.youtube.com/@golfmaxss' }
     ];
@@ -62,7 +62,7 @@ const Hero = ({ darkMode }) => {
                                         className={`w-8 h-8 sm:w-10 sm:h-10
                                 object-contain ${darkMode
                                                 ? ''
-                                                : 'filter brightness-75'}`} />
+                                                : 'filter brightness-110'}`} />
                                 </a>
                             ))}
                         </div>

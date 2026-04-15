@@ -1,4 +1,4 @@
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt, FaLinkedin } from 'react-icons/fa'
 import { FaFacebook } from 'react-icons/fa'
 import { FaLine } from 'react-icons/fa'
 import { FaHeart } from 'react-icons/fa'
@@ -54,7 +54,7 @@ const Footer = ({ darkMode }) => {
                     </a>
 
                     <a 
-                    href="https://web.facebook.com/aloha.golfring"
+                    href="https://www.linkedin.com/in/krittaya-b44b49401/"
                     className="w-10 h-10 rounded-full flex items-center
                     justify-center hover:scale-110 transition-all
                     hover:bg-linear-to-r hover:from-yellow-300
@@ -62,7 +62,7 @@ const Footer = ({ darkMode }) => {
                     bg-[#374151] dark:bg-[#f3f4f6]
                     text-white dark:text-[#374151]"
                     target='_blank'>
-                        <FaFacebook/>
+                        <FaLinkedin/>
                     </a>
 
                     <a 

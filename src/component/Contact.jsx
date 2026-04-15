@@ -37,7 +37,7 @@ export const Contact = ({ darkMode }) => {
                 }}>
                     Get In <span
                     style={{
-            background: 'linear-gradient(to right, #f97316, #f59e0b)',
+            background: 'linear-gradient(to right, #f9b116, #f3b03b)',
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
             color: 'transparent'

@@ -85,9 +85,8 @@ const Projects = ({ darkMode }) => {
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className='w-full h-full object-cover
-                          group-hover:scale-110 transition-transform
-                          duration-500'/>
+                                    className={`w-full h-full object-cover group-hover:scale-110 transition-all duration-500 
+                ${darkMode ? 'brightness-85' : 'saturate-75 brightness-95'}`}/>
                             </div>
                             <div className='p-4'>
                                 <h3
