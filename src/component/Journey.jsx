@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import project1 from '../assets/Project1.png'
 import { FaGithub } from 'react-icons/fa';
@@ -16,7 +16,11 @@ import lv9 from '../assets/09.png'
 import lv10 from '../assets/10.png'
 
 const Journey = () => {
-    useEffect(() => {
+    const pathRef = useRef(null);
+    const dotRefs = useRef([]);
+    const dotsContainerRef = useRef(null);
+
+   useEffect(() => {
         const link = document.querySelector("link[rel~='icon']");
 
         if (link) {
@@ -120,7 +124,10 @@ const Journey = () => {
 
                                 {/* จุดเชื่อมต่อ - ดีไซน์เป็นดอกไม้หรือใบไม้ */}
                                 <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                                    <div className="w-6 h-6 bg-orange-500 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                                    <div
+                                        ref={el => dotRefs.current[index] = el}
+                                        className="w-6 h-6 bg-orange-300 rounded-full border-4 border-white shadow-lg transition-all duration-500"
+                                    >
                                         <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                                     </div>
                                     {/* ใบไม้เล็กๆ ยื่นออกมา */}
