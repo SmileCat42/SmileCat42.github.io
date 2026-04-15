@@ -9,7 +9,6 @@ import Skills from './component/Skills'
 import Projects from './component/Projects'
 import Contact from './component/Contact'
 import Footer from './component/Footer'
-import Journey from './component/Journey' // หน้าใหม่ที่คุณสร้าง
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
@@ -33,8 +32,12 @@ function App() {
     document.documentElement.classList.toggle('dark');
   };
 
-  const MainContent = () => (
-    <>
+  return (
+    <div className={
+      darkMode
+        ? 'bg-linear-to-br from-gray-900 via-[#0d182e] to-gray-900 min-h-screen'
+        : 'bg-linear-to-br from-gray-50 to-blue-50 min-h-screen'
+    }>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <Hero darkMode={darkMode} />
       <About darkMode={darkMode} />
@@ -42,24 +45,7 @@ function App() {
       <Projects darkMode={darkMode} />
       <Contact darkMode={darkMode} />
       <Footer darkMode={darkMode} />
-    </>
-  )
-
-  return (
-    <Router>
-      <div className={
-        darkMode
-          ? 'bg-linear-to-br from-gray-900 via-[#0d182e] to-gray-900 min-h-screen transition-colors duration-500'
-          : 'bg-linear-to-br from-gray-50 to-blue-50 min-h-screen transition-colors duration-500'
-      }>
-        
-        <Routes>
-          <Route path="/" element={<MainContent />} />
-          <Route path="/journey" element={<Journey />} /> 
-        </Routes>
-
-      </div>
-    </Router>
+    </div>
   )
 }
 export default App

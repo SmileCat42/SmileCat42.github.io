@@ -20,7 +20,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     textHover: 'text-yellow-500',
     textActive: 'text-yellow-600',
     indicator: 'from-yellow-500 to-yellow-500',
-    button: 'from-yellow-500 to-yellow-500',
+    button: 'from-yellow-400 to-yellow-500',
   };
   const darkColors = {
     navBg: 'bg-linear-to-br from-gray-700 to-black',
@@ -29,7 +29,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     textHover: 'text-yellow-400',
     textActive: 'text-yellow-400',
     indicator: 'from-yellow-400 to-yellow-400',
-    button: 'from-yellow-400 to-yellow-400',
+    button: 'from-yellow-400 to-yellow-500',
   };
 
   const colors = darkMode ? darkColors : lightColors;
@@ -110,12 +110,12 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </motion.button>
             {/* Button */}
             <motion.a
-              href="#content"
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`hidden lg:block px-6 py-2 font-semibold
             rounded-full bg-linear-to-r ${colors.button}
-            text-white shadow-md hover:shadow-lg transition-shadow`}>
+            text-white shadow-md hover:shadow-lg transition-shadow hover:text-yellow-800`}>
               Hire Me
             </motion.a>
           </div>
@@ -184,7 +184,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               whileTap={{ scale: 0.95}}
               className={`block py-3 px-4 text-center font-semibold
               rounded-lg bg-linear-to-r ${colors.button}
-              text-white shadow-md `}>
+              text-white shadow-md hover:text-yellow-800`}>
                 Hire ME
               </motion.a>
             </div>

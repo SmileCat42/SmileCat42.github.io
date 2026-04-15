@@ -1,6 +1,6 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import project1 from '../assets/Project1.png'
-import project2 from '../assets/java3.png'
+import project2 from '../assets/07.png'
 import project3 from '../assets/09.png'
 import { Link } from 'react-router-dom';
 
@@ -159,7 +159,7 @@ const Projects = ({ darkMode }) => {
                             ดูโปรเจคทั้งหมด</span>
                     </a>
                     <a
-                        href="#/journey"  // ต้องใส่ #/ นำหน้าด้วยเพราะคุณใช้ HashRouter
+                        href="https://smilecat42.github.io/My-Growth/"  // ต้องใส่ #/ นำหน้าด้วยเพราะคุณใช้ HashRouter
                         target="_blank"
                         rel="noopener noreferrer" // เพิ่มความปลอดภัยเมื่อเปิดแท็บใหม่
                         style={{
