@@ -1,5 +1,5 @@
 import React from 'react'
-import golfDark from "../assets/golf04.png"
+import golfDark from "../assets/golf06.png"
 import golfLight from "../assets/golf02.jpg"
 
 const About = ({darkMode}) => {
