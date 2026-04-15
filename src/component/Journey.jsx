@@ -11,7 +11,7 @@ import lv5 from '../assets/04.png'
 import lv6 from '../assets/05.png'
 import lv7 from '../assets/06.png'
 import lv7_2 from '../assets/056.png'
-import lv8 from '../assets/07.png'
+import lv8 from '../assets/077.png'
 import lv9 from '../assets/09.png'
 import lv10 from '../assets/10.png'
 
