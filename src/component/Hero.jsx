@@ -7,7 +7,7 @@ import { Mail } from "lucide-react";
 import hi from '../assets/hi.png'
 import golfDark from "../assets/golf01.jpg"
 import golfLight from "../assets/golf02.jpg"
-import CV from "../assets/CV_กฤตยา_ตันติชัยยกุล.pdf"
+import CV from "../assets/กฤตยา_ตันติชัยยกุล_CV.pdf"
 
 const Hero = ({ darkMode }) => {
     const socialIcons = [

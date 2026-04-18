@@ -106,7 +106,7 @@ const About = ({darkMode}) => {
                     </div>
               </div>
           </div>
-          <a href='https://github.com/SmileCat42/SmileCat42.github.io/blob/main/src/assets/CV_กฤตยา_ตันติชัยยกุล.pdf'
+          <a href='https://github.com/SmileCat42/SmileCat42.github.io/blob/main/src/assets/กฤตยา_ตันติชัยยกุล_CV.pdf'
           target="_blank">
           <button className={`w-full sm:w-auto
                     inline-flex items-center border-2 border-yellow-500
