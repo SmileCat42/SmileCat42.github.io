@@ -106,6 +106,8 @@ const About = ({darkMode}) => {
                     </div>
               </div>
           </div>
+          <a href='https://github.com/SmileCat42/SmileCat42.github.io/blob/main/src/assets/CV_กฤตยา_ตันติชัยยกุล.pdf'
+          target="_blank">
           <button className={`w-full sm:w-auto
                     inline-flex items-center border-2 border-yellow-500
                     justify-center border-0
@@ -118,6 +120,7 @@ const About = ({darkMode}) => {
                     }`}>
                       Learn More
                     </button>
+                    </a>
         </article>
       </div>
     </section>

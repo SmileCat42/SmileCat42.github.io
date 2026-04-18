@@ -7,6 +7,7 @@ import { Mail } from "lucide-react";
 import hi from '../assets/hi.png'
 import golfDark from "../assets/golf01.jpg"
 import golfLight from "../assets/golf02.jpg"
+import CV from "../assets/CV_กฤตยา_ตันติชัยยกุล.pdf"
 
 const Hero = ({ darkMode }) => {
     const socialIcons = [
@@ -100,7 +101,9 @@ const Hero = ({ darkMode }) => {
                                 data-aos-delay='700'
                             >
                                 <a
-                                    href='google.co.th' className='w-full sm:w-auto'>
+                                    href={CV} 
+                                    download
+                                    className='w-full sm:w-auto'>
                                     <button className='w-full sm:w-auto
                     inline-flex items-center justify-center text-white
                     bg-linear-to-r from-yellow-400 to-yellow-500 border-0
